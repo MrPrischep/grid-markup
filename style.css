@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap'); 
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.2fr 1.5fr 1.2fr 0.8fr;
+    grid-template-areas: "nav nav nav nav"
+                         "sidebar main main main"
+                         "sidebar card1 card2 card3"
+                         "sidebar footer footer footer";
+    grid-gap: 0.2rem;
+    padding: 0.2rem;
+    font-family: 'Muli', sans-serif;
+    font-weight: 800;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 18px;
+}
+
+nav {
+    background: #61cdff;
+    grid-area: nav;
+}
+
+.sidebar {
+    background: #4cb0df;
+    grid-area: sidebar;
+}
+
+.main {
+    background: #449bc4;
+    grid-area: main;
+}
+
+.card1 {
+    background: #3e8cb1;
+    grid-area: card1;
+}
+
+.card2 {
+    background: #377c9c;
+    grid-area: card2;
+}
+
+.card3 {
+    background: #316f8b;
+    grid-area: card3;
+}
+
+footer {
+    background: #235166;
+    grid-area: footer;
+}
+
+@media  only screen and (max-width: 550px) {
+    .container {
+        display: grid;
+        height: 100vh;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.4fr 0.4fr 2.2fr 1.2fr 1.2fr 1.2fr 1.2fr;
+        grid-template-areas: "nav"
+                             "sidebar"
+                             "main"
+                             "card1"
+                             "card2"
+                             "card3"
+                             "footer";
+        grid-gap: 0.2rem;
+        padding: 0.2rem;
+        font-family: 'Muli', sans-serif;
+        font-weight: 800;
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 14px;
+    }
+}
